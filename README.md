@@ -3,7 +3,7 @@
 </p>
 
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines. If we want to work in an environment where any user account in our system can use any computer to login, then we can accomplish this using Active Directory and joining computers to the same domain. This lab goes over a brief setup of Active Directory. <br />
 
 
 <h2>Environments and Technologies Used</h2>
