@@ -63,18 +63,10 @@ This will bring up a prompt where we will select "add a new forest" then give yo
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
 <img src="https://i.imgur.com/R5VUAdJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Navigate to Active Directory Users and Computers (ADUC), and right-click to create an Organizational Unit (OU) called “_EMPLOYEES”. Then create a new OU called "_ADMINS". After this, both organizational groups should be empty. Open the _ADMINS OU and right-click to create a new user. Name the user "Jane Doe" and create a password for the user as well. From here on we will login to the DC with this account. 
+Navigate to Active Directory Users and Computers (ADUC), and right-click to create an Organizational Unit (OU) called “_EMPLOYEES”. Then create a new OU called "_ADMINS". After this, both organizational groups should be empty. Open the _ADMINS OU and right-click to create a new user. Name the user "Jane Doe" and create a password for the user as well. From here on we will login to the DC with this account. Make sure to right-click on the user, go to ->member of ->add and type "domain admin" then click "check names". It will add the user as a Domain Administrator.  
 </p>
 <br />
 
@@ -83,6 +75,8 @@ Navigate to Active Directory Users and Computers (ADUC), and right-click to crea
 </p>
 <p>
 The next step is to add Client-1 to the domain. From Azure, set Client-1's DNS settings to the DC's private address. For this we can get DC's private IP address by navigating to DC VM in Azure. Go back to Client-1 and go to ->networking ->Network Interface ->DNS Servers and select "custom" then add DC's private IP address. Now restart Client-1 from Azure. Login to Client-1 again. 
+  <p>
+Right-click the windows key and select "system". From this menu select "Rename this PC (Advanced)". Click "change", "domain", and type in mydomain.com or whatever name you have for your domain. We must then restart the computer for the domain change to take place. Now we should be able to login to Client-1 with our DC Admin account. 
 </p>
 <br />
 
