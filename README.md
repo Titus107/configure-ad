@@ -74,7 +74,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/R5VUAdJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Navigate to Active Directory Users and Computers (ADUC), and right-click to create an Organizational Unit (OU) called “_EMPLOYEES”. Then create a new OU called "_ADMINS". After this, both organizational groups should be empty. Open the _ADMINS OU and right-click to create a new user. Name the user "Jane Doe" and create a password for the user as well.  
+Navigate to Active Directory Users and Computers (ADUC), and right-click to create an Organizational Unit (OU) called “_EMPLOYEES”. Then create a new OU called "_ADMINS". After this, both organizational groups should be empty. Open the _ADMINS OU and right-click to create a new user. Name the user "Jane Doe" and create a password for the user as well. From here on we will login to the DC with this account. 
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/KlGENaE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+The next step is to add Client-1 to the domain. From Azure, set Client-1's DNS settings to the DC's private address. For this we can get DC's private IP address by navigating to DC VM in Azure. Go back to Client-1 and go to ->networking ->Network Interface ->DNS Servers and select "custom" then add DC's private IP address. Now restart Client-1 from Azure. Login to Client-1 again. 
 </p>
 <br />
 
