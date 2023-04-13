@@ -58,7 +58,7 @@ We move on to install Active Directory now on our DC. In the Server Manager clic
 <img src="https://i.imgur.com/6Suwt00.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-This will bring up a prompt where we will select "add a new forest" then give your domain a name. Click next and assign your DC a password as well. Click clicking "next" through the tabs until you reach "Installation" where you can then properly install Active Directory. Now we need to restart the VM and then reconnect remotely again. 
+This will bring up a prompt where we will select "add a new forest" then give your domain a name. Click next and assign your DC a password as well. Keep clicking "next" through the tabs until you reach "Installation" where you can then properly install Active Directory. Now we need to restart the VM and then reconnect remotely again. 
 </p>
 <br />
 
