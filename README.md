@@ -47,10 +47,10 @@ Now we can ensure connectivity between the DC and Client VMs by logging into the
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/VOae2AV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+We move on to install Active Directory now on our DC. In the Server Manager click "add roles and features" and keep selecting "next" until you reach the tab labeled "Server Roles". Add "Active Directory Domain Services". Afterwards, click the prompt to install AD. After closing your current window, you can click on a flag icon which will bring up a prompt. From this, click on "promote this server to a Domain Controller". 
 </p>
 <br />
 
