@@ -76,22 +76,18 @@ Navigate to Active Directory Users and Computers (ADUC), and right-click to crea
 <p>
 The next step is to add Client-1 to the domain. From Azure, set Client-1's DNS settings to the DC's private address. For this we can get DC's private IP address by navigating to DC VM in Azure. Go back to Client-1 and go to ->networking ->Network Interface ->DNS Servers and select "custom" then add DC's private IP address. Now restart Client-1 from Azure. Login to Client-1 again. 
   <p>
-Right-click the windows key and select "system". From this menu select "Rename this PC (Advanced)". Click "change", "domain", and type in mydomain.com or whatever name you have for your domain. We must then restart the computer for the domain change to take place. Now we should be able to login to Client-1 with our DC Admin account. 
+Right-click the windows key and select "system". From this menu select "Rename this PC (Advanced)". Click "change", "domain", and type in mydomain.com or whatever name you have for your domain. We must then restart the computer for the domain change to take place. Now we should be able to login to Client-1 with our DC Admin account. Go to system again then ->Remote Desktop ->select users that can remotely access this PC ->add and type "domain users" then click "check names". This will make it to where any account on our domain can login to this machine.  
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/gUSs8ws.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Finally, we will create a bunch of users for our domain at all once. All of them should be able to login to any machine on our domain besides the DC. 
+  <p>
+    The first step is to open our Server VM and open Powershell ISE as an Administrator. We will create many users at once by copy/pasting the contents of the following script: https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1 - recommend changing the number of total users created to a smaller amount. Run the script. All of the accounts will be created in the _EMPLOYEES folder. 
+    <p>
+      Congratulations! We now have a Windows Server running Active Directory, learned how to add a machine to our domain, and created users for our domain. 
 </p>
 <br />
